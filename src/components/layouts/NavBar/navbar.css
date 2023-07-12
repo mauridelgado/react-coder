@@ -1,0 +1,37 @@
+.logo {
+  height: 70px;
+  transform: rotate(80deg);
+}
+header nav {
+  width: 100vw;
+}
+.navUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.navUl li a {
+  text-decoration: none;
+  font-family: "Abel", sans-serif;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #f9e0bb;
+}
+nav {
+  background-color: #7e1717;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  .navUl li a {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+  }
+
+  .logo {
+    height: 50px;
+    transform: rotate(30deg);
+  }
+}

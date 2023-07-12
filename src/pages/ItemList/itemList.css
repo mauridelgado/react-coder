@@ -1,0 +1,21 @@
+.subt {
+  display: flex;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  margin: 3rem;
+  background-color: #dfd7bf;
+}
+.principal {
+  display: flex;
+  flex-direction: column;
+}
+.itemList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 150px;
+}
+@media (max-width: 425px) {
+  .itemList {
+    margin: 0px 50px;
+  }
+}

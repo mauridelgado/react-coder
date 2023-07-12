@@ -1,0 +1,23 @@
+.carrito {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: wheat;
+  padding: 1.5rem;
+  border-radius: 100%;
+  font-size: 2rem;
+  margin-right: 5rem;
+}
+
+@media (max-width: 425px) {
+  .carritoImg {
+    width: 15px;
+    height: 15px;
+  }
+  p {
+    font-size: 0.5rem;
+  }
+  .carrito {
+    padding: 0.5rem;
+  }
+}
