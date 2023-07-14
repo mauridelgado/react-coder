@@ -1,29 +1,38 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import CounterContainer from "../../components/common/counter/CounterContainer";
 import products from "../../productsMock";
-import { useParams } from "react-router-dom";
-import "./ItemDetail.css";
+import { useParams, useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = () => {
-  const [producto, setProducto] = useState({});
+  const { addToCart } = useContext(CartContext);
+
+  const [elemento, setElemento] = useState({});
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let productoSeleccionado = products.find((elemento) => elemento.id === +id);
-    const tarea = new Promise((res) => {
+    const tarea = new Promise((res, rej) => {
       res(productoSeleccionado);
     });
-    tarea.then((res) => setProducto(res));
+    tarea.then((res) => setElemento(res));
   }, [id]);
 
+  const onAdd = (cantidad) => {
+    let productCart = { ...elemento, quantity: cantidad };
+    addToCart(productCart);
+  };
   return (
     <div className="detail">
       <div className="card">
-        <img className="prod" src={producto.img} alt={producto.title} />
-        <h1>{producto.title}</h1>
+        <img className="prod" src={elemento.img} alt={elemento.title} />
+        <h1>{elemento.title}</h1>
 
-        <h2>${producto.price}</h2>
-        <p>{producto.description}</p>
+        <h2>${elemento.price}</h2>
+        <p>{elemento.description}</p>
+        <CounterContainer stock={elemento.stock} onAdd={onAdd} />
 
         <button>Agregar al carrito</button>
       </div>
