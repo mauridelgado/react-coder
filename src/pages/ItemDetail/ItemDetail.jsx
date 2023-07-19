@@ -1,40 +1,48 @@
 import { useContext, useEffect, useState } from "react";
 import CounterContainer from "../../components/common/counter/CounterContainer";
-import products from "../../productsMock";
-import { useParams, useNavigate } from "react-router-dom";
+
+import { useParams } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+import "./ItemDetail.css";
+import { db } from "../../firebaseConfig";
+import { getDoc, collection, doc } from "firebase/firestore";
 
 const ItemDetail = () => {
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, getQuantityById } = useContext(CartContext);
 
-  const [elemento, setElemento] = useState({});
+  const [producto, setProducto] = useState({});
 
   const { id } = useParams();
-  const navigate = useNavigate();
+
+  const totalQuantity = getQuantityById(id);
 
   useEffect(() => {
-    let productoSeleccionado = products.find((elemento) => elemento.id === +id);
-    const tarea = new Promise((res, rej) => {
-      res(productoSeleccionado);
+    let productsCollection = collection(db, "products");
+    let productRef = doc(productsCollection, id);
+    getDoc(productRef).then((res) => {
+      setProducto({ ...res.data(), id: res.id });
     });
-    tarea.then((res) => setElemento(res));
   }, [id]);
 
   const onAdd = (cantidad) => {
-    let productCart = { ...elemento, quantity: cantidad };
+    let productCart = { ...producto, quantity: cantidad };
     addToCart(productCart);
   };
   return (
     <div className="detail">
       <div className="card">
-        <img className="prod" src={elemento.img} alt={elemento.title} />
-        <h1>{elemento.title}</h1>
+        <div className="img">
+          <img src={producto.img} alt={producto.title} />
+        </div>
+        <h1>{producto.title}</h1>
 
-        <h2>${elemento.price}</h2>
-        <p>{elemento.description}</p>
-        <CounterContainer stock={elemento.stock} onAdd={onAdd} />
-
-        <button>Agregar al carrito</button>
+        <h2>${producto.price}</h2>
+        <p>{producto.description}</p>
+        {(typeof totalQuantity === "undefined" ||
+          producto.stock > totalQuantity) &&
+          producto.stock > 0 && (
+            <CounterContainer stock={producto.stock} onAdd={onAdd} />
+          )}
       </div>
     </div>
   );

@@ -2,9 +2,7 @@
   height: 70px;
   transform: rotate(80deg);
 }
-header nav {
-  width: 100vw;
-}
+
 .navUl {
   display: flex;
   justify-content: center;
@@ -20,18 +18,19 @@ header nav {
 nav {
   background-color: #7e1717;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  width: 100vw;
 }
 
 @media (max-width: 425px) {
   .navUl li a {
     font-size: 1.3rem;
-    padding: 0.7rem;
+    padding: 0.5rem;
   }
 
   .logo {
     height: 50px;
-    transform: rotate(30deg);
+    transform: rotate(20deg);
   }
 }

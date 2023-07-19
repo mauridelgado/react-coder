@@ -1,3 +1,27 @@
 button {
   margin: 2rem;
 }
+.aComprar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  height: 18rem;
+}
+.card {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  border-width: medium;
+  border-color: black;
+  margin: 2rem;
+}
+.carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

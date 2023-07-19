@@ -13,7 +13,7 @@ const CounterContainer = ({ stock, onAdd }) => {
   };
 
   return (
-    <Counter contador={contador} sumar={sumar} restar={restar} onAdd={onAdd} />
+    <Counter contador={contador} restar={restar} sumar={sumar} onAdd={onAdd} />
   );
 };
 

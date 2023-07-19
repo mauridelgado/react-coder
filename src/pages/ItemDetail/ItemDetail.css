@@ -9,7 +9,7 @@ h2 {
   font-family: "Abel", sans-serif;
   margin: 0.5rem;
 }
-.prod {
+img {
   height: 18rem;
 }
 .card {
@@ -20,4 +20,14 @@ h2 {
   border-width: medium;
   border-color: black;
   margin: 2rem;
+}
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
