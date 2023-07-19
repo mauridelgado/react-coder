@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   font-family: "Abel", sans-serif;
-  margin: 3rem;
+  margin: 1rem;
   background-color: #dfd7bf;
 }
 .principal {
@@ -12,10 +12,5 @@
 .itemList {
   display: flex;
   flex-wrap: wrap;
-  margin: 0px 150px;
-}
-@media (max-width: 425px) {
-  .itemList {
-    margin: 0px 50px;
-  }
+  margin: 0% 10%;
 }

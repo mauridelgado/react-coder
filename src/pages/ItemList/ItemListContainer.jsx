@@ -14,7 +14,7 @@ const ItemListContainer = () => {
     if (categoryName) {
       consulta = query(
         productsCollection,
-        where("category", "==", "categoryName")
+        where("category", "==", categoryName)
       );
     } else {
       consulta = productsCollection;
