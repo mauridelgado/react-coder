@@ -3,25 +3,35 @@ button {
 }
 .aComprar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 5rem;
+  margin: 2rem;
 }
 .img {
   height: 18rem;
 }
-.card {
+.cart {
   display: flex;
 
   justify-content: center;
   align-items: center;
-  border-width: medium;
-  border-color: black;
+
   margin: 2rem;
+  border: 2px solid black;
+  height: 20rem;
+  width: 50rem;
 }
 .carrito {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.subt {
+  font-family: "Abel", sans-serif;
+  background-color: red;
+  display: flex;
+  justify-content: start;
 }

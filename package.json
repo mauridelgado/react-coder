@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.14.1",
     "firebase": "^10.0.0",
     "material-icons": "^1.13.8",
     "react": "^18.2.0",
