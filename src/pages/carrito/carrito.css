@@ -7,17 +7,14 @@ button {
   justify-content: center;
   align-items: center;
   margin: 5rem;
-  margin: 2rem;
 }
 .img {
   height: 18rem;
 }
 .cart {
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   margin: 2rem;
   border: 2px solid black;
   height: 20rem;
@@ -34,4 +31,16 @@ button {
   background-color: red;
   display: flex;
   justify-content: start;
+}
+@media (max-width: 425px) {
+  .aComprar {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .cart {
+    flex-direction: column;
+    margin: 1rem;
+    height: 10rem;
+    width: 3rem;
+  }
 }
