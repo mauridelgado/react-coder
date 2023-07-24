@@ -2,7 +2,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>Acá está el footer</p>
+      <p>Gracias por comprar en nuestra tienda</p>
     </div>
   );
 };
