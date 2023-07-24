@@ -12,17 +12,12 @@ h2 {
 .prodImg {
   height: 18rem;
 }
-.img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .card {
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   box-shadow: 1px 10px 3px grey;
   overflow: hidden;
   width: 200px;

@@ -1,6 +1,5 @@
-let products = [
+export let products = [
   {
-    id: 1,
     title: "Don pascual cabernet 750ml",
     price: 490,
     stock: 17,
@@ -9,7 +8,6 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1687383675/vino-don-pascual-varietal-cabernet-sauvignon-750ml-vino-don-pascual-varietal-cabernet-sauvignon-750ml_zxrcgp.jpg",
   },
   {
-    id: 2,
     title: "Don pascual rosado 750ml",
     price: 490,
     stock: 13,
@@ -18,7 +16,6 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1687384077/Brut-Blanc-de-noirs-t_hwrltb.jpg",
   },
   {
-    id: 3,
     title: "Don pascual blanco 750ml",
     price: 590,
     stock: 21,
@@ -27,7 +24,6 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1687383725/Brut-Blanc-de-Blancs-t_nge9wg.jpg",
   },
   {
-    id: 4,
     title: "Johnnie walker red label 750ml",
     price: 950,
     stock: 38,
@@ -36,7 +32,6 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1687384050/johnnie-750_fzcvta.webp",
   },
   {
-    id: 5,
     title: "Johnnie walker black label 750ml",
     price: 1890,
     stock: 27,
@@ -45,7 +40,6 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1687383796/15949502775326_rpuzik.png",
   },
   {
-    id: 6,
     title: "Cerveza Heineken 473ml",
     price: 109,
     stock: 86,
@@ -54,7 +48,6 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1688851348/image-removebg-preview_qlwmv9.png",
   },
   {
-    id: 7,
     title: "Cerveza Heineken 970ml",
     price: 189,
     stock: 91,
@@ -63,4 +56,3 @@ let products = [
     img: "https://res.cloudinary.com/dn6wz2clp/image/upload/v1688851575/image-removebg-preview_1_ywc7ky.png",
   },
 ];
-export default products;

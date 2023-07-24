@@ -42,9 +42,8 @@ const ItemDetail = () => {
   return (
     <div className="detail">
       <div className="card">
-        <div className="img">
-          <img src={producto.img} alt={producto.title} />
-        </div>
+        <img src={producto.img} alt={producto.title} />
+
         <h1>{producto.title}</h1>
 
         <h2>${producto.price}</h2>

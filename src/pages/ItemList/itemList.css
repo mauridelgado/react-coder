@@ -12,5 +12,13 @@
 .itemList {
   display: flex;
   flex-wrap: wrap;
-  margin: 0% 10%;
+  margin: 0% 8%;
+}
+.skeleton {
+  margin: 2rem;
+}
+@media (max-width: 425px) {
+  .itemList {
+    justify-content: center;
+  }
 }
