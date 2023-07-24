@@ -11,6 +11,7 @@ h2 {
 }
 .prodImg {
   height: 18rem;
+  width: auto;
 }
 
 .card {
@@ -20,8 +21,8 @@ h2 {
   align-items: center;
   box-shadow: 1px 10px 3px grey;
   overflow: hidden;
-  width: 200px;
-  height: 400px;
+  width: 250px;
+  height: 450px;
   padding: 2rem;
   background-color: #f5f5f5;
 }

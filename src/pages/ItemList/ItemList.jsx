@@ -3,7 +3,7 @@ import "./itemList.css";
 import { Skeleton } from "@mui/material";
 
 const ItemList = ({ items }) => {
-  let arr = [1, 2, 3, 4, 5, 6];
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
     <div className="principal">
       <h1 className="subt">Nuestros productos</h1>
@@ -15,7 +15,7 @@ const ItemList = ({ items }) => {
           : arr.map((e) => {
               return (
                 <div className="skeleton" key={e}>
-                  <Skeleton variant="rectangular" width={200} height={340} />
+                  <Skeleton variant="rectangular" width={250} height={400} />
                   <Skeleton
                     variant="text"
                     sx={{ fontSize: "2rem" }}
