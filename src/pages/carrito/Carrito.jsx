@@ -42,7 +42,7 @@ const CartContainer = () => {
           </div>
         );
       })}
-      {cart.length > 0 && <h2>El total es {total}</h2>}
+      {cart.length > 0 && <h2>El total es ${total}</h2>}
       {cart.length > 0 && <button onClick={limpiar}>Limpiar carrito</button>}
       {cart.length > 0 && (
         <Link to="/checkout">
